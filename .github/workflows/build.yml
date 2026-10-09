@@ -1,0 +1,19 @@
+name: Build Mod
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build
+        run: |
+          chmod +x gradlew || true
+          ./gradlew build || gradle build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teninone-jar
+          path: build/libs/*.jar
