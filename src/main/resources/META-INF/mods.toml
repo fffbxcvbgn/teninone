@@ -1,0 +1,12 @@
+﻿modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="teninone"
+version="1.0.0"
+displayName="Ten In One"
+authors="AI"
+description='''
+10 features in one mod for Minecraft 1.20.1 Forge.
+'''
